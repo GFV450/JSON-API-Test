@@ -22,5 +22,13 @@ struct Movie {
         self.price = 0
         self.link = ""
         self.releaseDate = ""
+        
+        let moviesData = JSON(data: jsonData)
+        
+        
+        let topMovieData = moviesData["feed"]["entry"][0]
+        let topMovie = Movie(json: topMovieData)
     }
+    
+    
 }

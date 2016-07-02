@@ -41,7 +41,16 @@ internal func exerciseOne() {
      
      */
     
+    let lastName = userData["results"][0]["name"]["last"].stringValue
+    let streetName = userData["results"][0]["location"]["street"].stringValue
+    let city = userData["results"][0]["location"]["city"].stringValue
+    let zipCode = userData["results"][0]["location"]["postcode"].stringValue
+    let state = userData["results"][0]["location"]["state"].stringValue
+    let title = userData["results"][0]["name"]["title"].stringValue
+    let emailAddress = userData["results"][0]["email"].stringValue
+    let cellphoneNumber = userData["results"][0]["cell"].stringValue
     
+    print("\(firstName) \(lastName) lives at \(streetName) in \(city), \(state), \(zipCode). If you want to contact them, you can email \(title) \(firstName) at \(emailAddress) or call their cell at \(cellphoneNumber)")
     
     
     
@@ -65,6 +74,8 @@ internal func exerciseTwo() {
     
     let topMovieData = moviesData["feed"]["entry"][0]
     let topMovie = Movie(json: topMovieData)
+    
+    
     
     // Uncomment this print statement when you are ready to check your code!
     
